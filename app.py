@@ -83,8 +83,9 @@ WATCHLIST = {
         "BABA":  "Alibaba Group (China)",
         "JD":    "JD.com (China)",
         "BIDU":  "Baidu (China)",
-        "INFY":  "Infosys (India)",
+        "INFY":  "Infosys (India — ADR)",
         "NIO":   "NIO Inc. (China — EV)",
+        "BYDDY": "BYD Co. (China — EV/Battery ADR)",
     },
     "Commodities (ETFs — directly purchasable)": {
         "GLD":  "SPDR Gold Shares ETF",
