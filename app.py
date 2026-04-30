@@ -75,7 +75,7 @@ WATCHLIST = {
         "VWO":  "Vanguard Emerging Markets",
         "EWZ":  "iShares Brazil",
         "MCHI": "iShares MSCI China",
-        "INDY": "iShares India 50",
+        "INDA": "iShares MSCI India",
         "EZA":  "iShares South Africa",
     },
     "Stocks": {
