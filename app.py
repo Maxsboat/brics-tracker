@@ -86,11 +86,11 @@ WATCHLIST = {
         "INFY":  "Infosys (India)",
         "NIO":   "NIO Inc. (China — EV)",
     },
-    "Commodities": {
-        "GC=F": "Gold Futures",
-        "CL=F": "Crude Oil Futures (WTI)",
-        "HG=F": "Copper Futures",
-        "SI=F": "Silver Futures",
+    "Commodities (ETFs — directly purchasable)": {
+        "GLD":  "SPDR Gold Shares ETF",
+        "USO":  "United States Oil Fund ETF",
+        "CPER": "United States Copper Index ETF",
+        "SLV":  "iShares Silver Trust ETF",
     },
     "Currencies (USD base)": {
         "CNY=X": "USD → Chinese Yuan",
@@ -234,7 +234,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 # ══════════════════════════════════════════════════════════════════════════════
 with tab1:
     st.markdown("### Daily Price & Change")
-    st.caption("All prices in USD. Currencies show USD per 1 unit of local currency inverse — higher = stronger USD.")
+    st.caption("All prices in USD. Commodity prices are ETF share prices — directly purchasable like stocks. Currencies show how many local units buy 1 USD — higher = stronger USD.")
 
     for category, tickers in WATCHLIST.items():
         st.markdown(f"**{category}**")
