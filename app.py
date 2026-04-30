@@ -117,6 +117,8 @@ RSS_FEEDS = [
     {"name": "Al Jazeera",       "url": "https://www.aljazeera.com/xml/rss/all.xml"},
     {"name": "Xinhua",           "url": "http://www.xinhuanet.com/english/rss/worldrss.xml"},
     {"name": "TASS",             "url": "https://tass.com/rss/v2.xml"},
+    {"name": "MIT Tech Review",  "url": "https://www.technologyreview.com/feed/"},
+    {"name": "Wired",            "url": "https://www.wired.com/feed/rss"},
 ]
 
 BRICS_KEYWORDS = [
@@ -124,6 +126,8 @@ BRICS_KEYWORDS = [
     "uae", "ethiopia", "egypt", "saudi", "yuan", "renminbi", "de-dollarization",
     "emerging market", "commodity", "oil", "gold", "copper", "trade",
     "sanctions", "mbridge", "buffett", "berkshire", "vale", "petrobras",
+    "halos", "ai provenance", "ai accountability", "sbom", "cyclonedx",
+    "software bill of materials", "ai transparency", "model provenance",
 ]
 
 # ─── Data Functions ────────────────────────────────────────────────────────────
@@ -226,8 +230,8 @@ with col_ref:
 st.divider()
 
 # ─── Tabs ─────────────────────────────────────────────────────────────────────
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📊 Watchlist", "📈 Charts", "🚦 Signals", "📰 News", "🦁 Buffett Watch"
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+    "📊 Watchlist", "📈 Charts", "🚦 Signals", "📰 News", "🦁 Buffett Watch", "🔬 HALOS Watch"
 ])
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -458,6 +462,138 @@ with tab5:
         "sogo shosha in 2020 and has since increased them. These firms — Itochu, Marubeni, Mitsubishi, "
         "Mitsui, Sumitomo — are the world's largest commodity and resource traders, with deep BRICS-market "
         "supply chains. His move is widely read as a commodity/emerging markets play by proxy."
+    )
+
+# ══════════════════════════════════════════════════════════════════════════════
+# TAB 6 — HALOS WATCH
+# ══════════════════════════════════════════════════════════════════════════════
+with tab6:
+    st.markdown("### 🔬 HALOS Watch — AI Provenance & Accountability")
+    st.caption("Monitoring developments in AI transparency, provenance, and accountability frameworks.")
+
+    st.markdown("""
+<div style='background:#1a1a2e;border-left:4px solid #7c4dff;border-radius:8px;padding:16px 20px;margin-bottom:16px'>
+  <div style='font-size:1.1em;font-weight:700;color:#fff;margin-bottom:8px'>What is HALOS?</div>
+  <div style='color:#ccc;font-size:0.9em;line-height:1.6'>
+    HALOS (Hierarchical Accountability and Lineage for Open Systems) is an open-source AI provenance 
+    and accountability framework developed in northern Michigan. It addresses a critical gap in AI 
+    deployment: the ability to trace, verify, and audit the lineage of AI models, datasets, and 
+    decisions across organizational boundaries.<br><br>
+    Built on open standards including <strong>CycloneDX</strong>, <strong>SLSA</strong>, and 
+    <strong>in-toto predicates</strong>, HALOS provides the infrastructure for AI accountability 
+    that eight professional domains — law, medicine, journalism, finance, government, education, 
+    research, and engineering — urgently need but currently lack.
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("""
+<div style='background:#1e2130;border-radius:8px;padding:16px;margin-bottom:12px'>
+  <div style='font-weight:700;color:#7c4dff;margin-bottom:8px'>🏗️ Technical Foundation</div>
+  <div style='color:#ccc;font-size:0.875em;line-height:1.8'>
+    • <strong>CycloneDX</strong> — Software Bill of Materials (SBOM) standard<br>
+    • <strong>SLSA</strong> — Supply chain security framework<br>
+    • <strong>in-toto predicates</strong> — Cryptographic attestation<br>
+    • <strong>Open source</strong> — Community governed<br>
+    • <strong>Cross-domain</strong> — Built for interoperability
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("""
+<div style='background:#1e2130;border-radius:8px;padding:16px;margin-bottom:12px'>
+  <div style='font-weight:700;color:#7c4dff;margin-bottom:8px'>🎯 Target Domains</div>
+  <div style='color:#ccc;font-size:0.875em;line-height:1.8'>
+    • Legal & compliance<br>
+    • Medicine & clinical AI<br>
+    • Journalism & media verification<br>
+    • Financial services<br>
+    • Government & regulation<br>
+    • Education & research<br>
+    • Engineering & infrastructure
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.markdown("""
+<div style='background:#1e2130;border-radius:8px;padding:16px;margin-bottom:16px'>
+  <div style='font-weight:700;color:#7c4dff;margin-bottom:8px'>🔗 Resources</div>
+  <div style='color:#ccc;font-size:0.875em;line-height:2'>
+    • <a href='https://github.com' target='_blank' style='color:#4a9eff'>HALOS GitHub Repository</a> — Source code and documentation<br>
+    • <a href='https://cyclonedx.org' target='_blank' style='color:#4a9eff'>CycloneDX Standard</a> — SBOM specification<br>
+    • <a href='https://slsa.dev' target='_blank' style='color:#4a9eff'>SLSA Framework</a> — Supply chain security levels<br>
+    • <a href='https://in-toto.io' target='_blank' style='color:#4a9eff'>in-toto Project</a> — Software supply chain integrity
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.divider()
+    st.markdown("### 📡 AI Accountability News")
+    st.caption("Headlines filtered for AI provenance, transparency, and accountability developments.")
+
+    HALOS_KEYWORDS = [
+        "ai provenance", "ai accountability", "ai transparency", "sbom",
+        "software bill of materials", "model transparency", "ai audit",
+        "algorithmic accountability", "ai governance", "ai regulation",
+        "ai supply chain", "model lineage", "ai traceability", "cyclonedx",
+        "ai ethics", "responsible ai", "ai compliance", "ai oversight",
+    ]
+
+    @st.cache_data(ttl=1800)
+    def fetch_halos_news():
+        articles = []
+        halos_feeds = [
+            {"name": "MIT Tech Review",  "url": "https://www.technologyreview.com/feed/"},
+            {"name": "Wired",            "url": "https://www.wired.com/feed/rss"},
+            {"name": "Reuters Tech",     "url": "https://feeds.reuters.com/reuters/technologyNews"},
+            {"name": "AP Technology",    "url": "https://feeds.apnews.com/rss/apf-technology"},
+        ]
+        for feed in halos_feeds:
+            try:
+                parsed = feedparser.parse(feed["url"])
+                for entry in parsed.entries[:25]:
+                    title   = getattr(entry, "title", "")
+                    summary = getattr(entry, "summary", "")
+                    link    = getattr(entry, "link", "#")
+                    pub     = getattr(entry, "published", "")
+                    text    = (title + " " + summary).lower()
+                    if any(kw in text for kw in HALOS_KEYWORDS):
+                        articles.append({
+                            "source":  feed["name"],
+                            "title":   title,
+                            "summary": summary[:200] + "..." if len(summary) > 200 else summary,
+                            "link":    link,
+                            "pub":     pub,
+                        })
+            except Exception:
+                continue
+        return articles
+
+    with st.spinner("Loading AI accountability news..."):
+        halos_articles = fetch_halos_news()
+
+    if halos_articles:
+        st.caption(f"{len(halos_articles)} relevant articles found.")
+        for art in halos_articles:
+            st.markdown(f"""
+<div style='border-left:3px solid #7c4dff;padding:8px 12px;margin:8px 0;background:#1e2130;border-radius:0 6px 6px 0'>
+  <div style='font-size:0.75em;color:#888;text-transform:uppercase'>{art['source']} · {art['pub'][:25] if art['pub'] else ''}</div>
+  <div style='font-weight:600;margin:4px 0'><a href='{art['link']}' target='_blank' style='color:#7c4dff;text-decoration:none'>{art['title']}</a></div>
+  <div style='font-size:0.85em;color:#bbb'>{art['summary']}</div>
+</div>
+""", unsafe_allow_html=True)
+    else:
+        st.info("No AI accountability articles found right now. Try refreshing.")
+
+    st.divider()
+    st.caption(
+        "HALOS is an independent open-source project. This tab monitors the broader AI accountability "
+        "ecosystem — regulatory developments, standards evolution, and deployment news relevant to "
+        "the domains HALOS serves."
     )
 
 # ─── Footer ───────────────────────────────────────────────────────────────────
